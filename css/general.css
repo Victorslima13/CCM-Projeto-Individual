@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Frijole&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
 .frijole-regular {
     font-family: "Frijole", system-ui;
@@ -6,22 +7,72 @@
     font-style: normal;
 }
 
+.special-elite-regular {
+    font-family: "Special Elite", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}  
+
 :root {
     --header-height: 120px;
-    --header-width: 1455;
 }
 
 *{
+    font-family: "Special Elite", system-ui;
+    font-weight: 400;
+    font-style: normal;
     padding: 0;
     margin: 0; 
     box-sizing: border-box;
 }
 
 body{
-    background-image: url();
+    background-image: url('../images/Floresta\ Sinistra\ Roxa.png');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+
 .header {
     background-image: url('../images/Placa.png');
-    width: var(--header-width);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
     height: var(--header-height);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header .handnote {
+    display: flex;
+    flex-direction: column;
+}
+
+.header .handnote span{
+    font-family: "Frijole", system-ui;
+    font-weight: 400;
+    font-size: 24px;
+    font-style: normal;
+    text-align: center;
+}
+
+.header .navbutton .menutext {
+    display: flex;
+    flex-direction: column;
+}
+
+.header .navbutton .menutext span {
+    font-family: "Frijole", system-ui;
+    font-weight: 400;
+    font-size: 12px;
+    font-style: normal;
+    text-align: center;
+}
+
+.navbutton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
