@@ -1,8 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Frijole&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
-.frijole-regular {
-    font-family: "Frijole", system-ui;
+@font-face {
+    font-family: "help me";
+    src: url('../fontes/help_me/HelpMe.ttf');
+}
+
+.HelpMe {
+    font-family: "help me";
     font-weight: 400;
     font-style: normal;
 }
@@ -17,8 +21,8 @@
     --header-height: 120px;
 }
 
-*{
-    font-family: "Special Elite", system-ui;
+* {
+    font-family: "Special Elite";
     font-weight: 400;
     font-style: normal;
     padding: 0;
@@ -26,7 +30,7 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     background-image: url('../images/Floresta\ Sinistra\ Roxa.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -38,6 +42,7 @@ body{
     background-size: cover;
     width: 100%;
     height: var(--header-height);
+    position: fixed;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -50,9 +55,9 @@ body{
 }
 
 .header .handnote span{
-    font-family: "Frijole", system-ui;
+    font-family: "help me";
+    font-size: 40px;
     font-weight: 400;
-    font-size: 24px;
     font-style: normal;
     text-align: center;
 }
@@ -63,9 +68,9 @@ body{
 }
 
 .header .navbutton .menutext span {
-    font-family: "Frijole", system-ui;
+    font-family: "help me";
+    font-size: 24px;
     font-weight: 400;
-    font-size: 12px;
     font-style: normal;
     text-align: center;
 }
@@ -75,4 +80,78 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.slidermenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 295px;
+    height: 1023px;
+    background-image: url('../images/Trilha\ vista\ topo.png');
+    padding-top: var(--header-height);
+    align-items: center;
+}
+
+.slidermenu-content {
+    overflow: fixed;
+    height: 1200px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.sections .section{
+    display: flex;
+    flex-direction: column;
+}
+
+.sections .section {
+    list-style: none;
+    background-image: url('../images/Placa\ seção.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 272px;
+    height: 144px;
+    align-items: center;
+    justify-content: center;
+}
+
+.sections .section.selected {
+    background-image: url('../images/Seção\ selecionada.png');
+    background-repeat: no-repeat;
+}
+
+.sections .section.selected a {
+    transform: translateY(+50px);
+}
+
+.subsection .dropdown {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    font-family: "help me";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    color: black;
+    text-decoration-line: none;
+}
+
+.subsection .dropdown.selected {
+    background-image: url('../images/Placa\ seção.png');
+    background-repeat: no-repeat;
+    width: 202px;
+    height: 84px;
+    opacity: 0;
+} 
+
+.subsection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
