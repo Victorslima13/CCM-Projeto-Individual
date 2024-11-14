@@ -5,18 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CCM Sobre os catalogos</title>
-    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="../css/general.css">
 </head>
 
 <body>
-    <div class="header">
-        <div class="navbutton">
-            <a href="./index.html">
-                <img src="./images/Andarilho menu.png" alt="Vetor de um homem fazendo trilha">
+    <header>
+        <div class="navbutton sidebar">
+            <div id="markselect" class="markselect" style="mix-blend-mode: color-burn;"></div>
+            <a href="javascript:void(0);" onclick="openslidermenu()">
+                <img src="../images/Andarilho menu.png" height="73px" width="57.5px
+                 alt="Vetor de um homem fazendo trilha">
+                <div class="menutext">
+                    <span>MENU</span>
+                </div>
             </a>
-            <div class="menutext">
-                <span>MENU</span>
-            </div>
         </div>
 
         <div class="handnote">
@@ -24,26 +26,28 @@
             <span>CRIATURAS E MONSTROS</span>
         </div>
 
-        <div class="navbutton">
-            <a href="./index.html">
-                <img src="./images/sticky-notes 1.png" style="mix-blend-mode: lighten;" alt="Vetor de notas post-it">
+        <div class="navbutton myprofile">
+            <a href="#">
+                <img src="../images/sticky-notes 1.png" height="66px" width="66px" style="mix-blend-mode: lighten;" alt="Vetor de notas post-it">
+                <div class="menutext">
+                    <span>Meu Perfil</span>
+                </div>
             </a>
-            <div class="menutext">
-                <span>Meu Perfil</span>
-            </div>
         </div>
-    </div>
+    </header>
 
-    <div class="slidermenu">
+    <div id="dropmenu" class="slidermenu">
         <div class="slidermenu-content">
             <div class="logo">
-                <img src="./images/logo livro.png" alt="Logo do site">
+                <img src="../images/logo livro.png" alt="Logo do site">
             </div>
     
             <ul class="sections">
                 <li class="section selected">
-                    <a href="#">Destaques</a>   
-                    <ul class="">
+                    <a href="#">
+                        Destaques
+                    </a>   
+                        <ul class="">
                         <li class="dropdown selected">
                             <a href=""></a>
                         </li>
@@ -80,5 +84,6 @@
         </div>
     </div>
 </body>
-
 </html>
+
+<script src="../js/index.js"></script>

@@ -15,7 +15,7 @@
     font-family: "Special Elite", system-ui;
     font-weight: 400;
     font-style: normal;
-}  
+}
 
 :root {
     --header-height: 120px;
@@ -26,7 +26,7 @@
     font-weight: 400;
     font-style: normal;
     padding: 0;
-    margin: 0; 
+    margin: 0;
     box-sizing: border-box;
 }
 
@@ -34,27 +34,30 @@ body {
     background-image: url('../images/Floresta\ Sinistra\ Roxa.png');
     background-size: cover;
     background-repeat: no-repeat;
+    overflow-y: hidden;
 }
 
-.header {
+header {
     background-image: url('../images/Placa.png');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     height: var(--header-height);
     position: fixed;
+    top: 0px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    z-index: 999;
 }
 
-.header .handnote {
+header .handnote {
     display: flex;
     flex-direction: column;
 }
 
-.header .handnote span{
+header .handnote span {
     font-family: "help me";
     font-size: 40px;
     font-weight: 400;
@@ -62,12 +65,13 @@ body {
     text-align: center;
 }
 
-.header .navbutton .menutext {
+header .navbutton a {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-.header .navbutton .menutext span {
+header .navbutton .menutext span {
     font-family: "help me";
     font-size: 24px;
     font-weight: 400;
@@ -83,24 +87,43 @@ body {
 }
 
 .slidermenu {
+    transition: 0.2s;
     display: flex;
     flex-direction: column;
     justify-content: start;
-    width: 295px;
-    height: 1023px;
-    background-image: url('../images/Trilha\ vista\ topo.png');
-    padding-top: var(--header-height);
+    width: 0px;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
     align-items: center;
+    background-image: url('../images/Trilha\ vista\ topo.png');
+}
+
+.markselect {
+    display: none;
+    background-image: url('../images/scratch\ mark.png');
+    width: 96px;
+    height: 96px;
+    transform: rotate(-10deg);
+}
+
+.slidermenu::-webkit-scrollbar {
+    display: none;
 }
 
 .slidermenu-content {
-    overflow: fixed;
-    height: 1200px;
-    overflow-y: scroll;
-    overflow-x: hidden;
+    padding-top: var(--header-height);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.sections .section{
+.slidermenu-content .logo {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.sections .section {
     display: flex;
     flex-direction: column;
 }
@@ -119,6 +142,8 @@ body {
 .sections .section.selected {
     background-image: url('../images/Seção\ selecionada.png');
     background-repeat: no-repeat;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .sections .section.selected a {
@@ -142,12 +167,13 @@ a {
 }
 
 .subsection .dropdown.selected {
-    background-image: url('../images/Placa\ seção.png');
+    background-image: url('../images/Sub\ selecionada.png');
     background-repeat: no-repeat;
     width: 202px;
     height: 84px;
-    opacity: 0;
-} 
+    /* opacity: 0; */
+    border: 1px solid;
+}
 
 .subsection {
     display: flex;
