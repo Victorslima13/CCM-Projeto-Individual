@@ -18,7 +18,7 @@
 }
 
 :root {
-    --header-height: 120px;
+    --header-height: 10vh;
 }
 
 * {
@@ -31,10 +31,13 @@
 }
 
 body {
+    display: flex;
+    flex-direction: row;
     background-image: url('../images/Floresta\ Sinistra\ Roxa.png');
     background-size: cover;
     background-repeat: no-repeat;
     overflow-y: hidden;
+    justify-content: center;
 }
 
 header {
@@ -88,7 +91,9 @@ header .navbutton .menutext span {
 
 .slidermenu {
     transition: 0.2s;
-    display: flex;
+    display: block;
+    position: fixed;
+    left: 0px;
     flex-direction: column;
     justify-content: start;
     width: 0px;
@@ -101,6 +106,7 @@ header .navbutton .menutext span {
 
 .markselect {
     display: none;
+    position: absolute;
     background-image: url('../images/scratch\ mark.png');
     width: 96px;
     height: 96px;
@@ -123,13 +129,23 @@ header .navbutton .menutext span {
     margin-bottom: 10px;
 }
 
+.sections {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section:hover div{
+    display: block;
+}
+
 .sections .section {
     display: flex;
     flex-direction: column;
 }
 
 .sections .section {
-    list-style: none;
     background-image: url('../images/Placa\ seção.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -147,14 +163,7 @@ header .navbutton .menutext span {
 }
 
 .sections .section.selected a {
-    transform: translateY(+50px);
-}
-
-.subsection .dropdown {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    transform: translateY(+20px);
 }
 
 a {
@@ -166,18 +175,40 @@ a {
     text-decoration-line: none;
 }
 
-.subsection .dropdown.selected {
-    background-image: url('../images/Sub\ selecionada.png');
-    background-repeat: no-repeat;
-    width: 202px;
-    height: 84px;
-    /* opacity: 0; */
-    border: 1px solid;
+.section a {
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translateY(-20px);
 }
 
-.subsection {
+.subsections {
+    display: none;
+}
+
+.subsectionsnews {
+    display: block;
+}
+
+.subsectionscomp {
+    display: none;
+}
+
+.subsectionscamp {
+    display: none;
+}
+
+.subsections a {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    background-image: url('../images/sub\ placa\ seção.png');
+    background-repeat: no-repeat;
+    width: 212px;
+    height: 84px;
+    text-align: center;
+    font-size: 18px;
 }

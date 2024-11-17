@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCM Sobre os catalogos</title>
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/book.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbutton sidebar">
+            <a href="javascript:void(0);" onclick="openslidermenu()">
+                <div id="traveller"><img src="../images/Andarilho menu.png" alt="Viajante fazendo trilha"></div>
+                <div class="menutext">
+                    <span>MENU</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="handnote">
+            <span>COMPENDIO MULTIVERSAL</span>
+            <span>CRIATURAS E MONSTROS</span>
+        </div>
+
+        <div class="navbutton myprofile">
+            <a href="./cadastro.html">
+                <img src="../images/sticky-notes 1.png" height="66px" width="66px" style="mix-blend-mode: lighten;"
+                    alt="Vetor de notas post-it">
+                <div class="menutext">
+                    <span>Meu Perfil</span>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <div id="dropmenu" class="slidermenu">
+        <div class="slidermenu-content">
+            <div class="logo">
+                <img src="../images/logo livro.png" alt="Logo do site">
+            </div>
+
+            <div class="sections">
+                <div id="linews" class="section selected">
+                    <a href="javascript:void(0);" onclick="opendropmenunews()">
+                        Destaques
+                    </a>
+                </div>
+                <div id="subsectionsnews" class="subsections">
+                    <a href="../html/Sobre os catalogos.html">Sobre os catalogos</a>
+                    <a href="">Novidades</a>
+                </div>
+
+                <div id="licomp" class="section">
+                    <a href="javascript:void(0);" onclick="opendropmenucomp()">
+                        Compendio
+                    </a>
+                </div>
+                <div id="subsectionscomp" class="subsections">
+                    <a href="">Catalogos</a>
+                    <a href="">Estatisticas</a>
+                </div>
+
+                <!-- <div id="licamp" class="section">
+                    <a href="javascript:void(0);" onclick="opendropmenucamp()">
+                        Contos da Fogueira
+                    </a>
+                </div>
+                <div id="subsectionscamp" class="subsections">
+                    <a href="">a</a>
+                    <a href="">b</a>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="book">
+        <div class="bookcover">
+            <img src="../images/Livro Capa.png" alt='Capa de Livro "Sobre os catalogos"'>
+        </div>
+        <div class="bookcontent"></div>
+    </div>
+</body>
+
+</html>
+
+<script src="../js/general.js"></script>
