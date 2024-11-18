@@ -1,11 +1,11 @@
 function openslidermenu() {
     var status = document.getElementById("dropmenu").style.width
     
-    if (status > "0px") {
-        document.getElementById("dropmenu").style.width = "0"
+    if (status > "0vw") {
+        document.getElementById("dropmenu").style.width = "0vw"
         traveller.innerHTML=`<img src="../images/Andarilho menu.png" alt="Viajante fazendo trilha">`
     } else {
-        document.getElementById("dropmenu").style.width = "265px"
+        document.getElementById("dropmenu").style.width = "20vw"
         traveller.innerHTML=`<img src="../images/traveller scratched.png" alt="Viajante fazendo trilha">`
     }
 }

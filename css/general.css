@@ -18,7 +18,7 @@
 }
 
 :root {
-    --header-height: 10vh;
+    --header-height: 18vh;
 }
 
 * {
@@ -36,8 +36,10 @@ body {
     background-image: url('../images/Floresta\ Sinistra\ Roxa.png');
     background-size: cover;
     background-repeat: no-repeat;
-    overflow-y: hidden;
-    justify-content: center;
+}
+
+body::-webkit-scrollbar{
+    display: none;
 }
 
 header {
@@ -62,7 +64,7 @@ header .handnote {
 
 header .handnote span {
     font-family: "help me";
-    font-size: 40px;
+    font-size: 6.5vh;
     font-weight: 400;
     font-style: normal;
     text-align: center;
@@ -76,7 +78,7 @@ header .navbutton a {
 
 header .navbutton .menutext span {
     font-family: "help me";
-    font-size: 24px;
+    font-size: 1.8vw;
     font-weight: 400;
     font-style: normal;
     text-align: center;
@@ -93,23 +95,25 @@ header .navbutton .menutext span {
     transition: 0.2s;
     display: block;
     position: fixed;
-    left: 0px;
+    left: 0vw;
     flex-direction: column;
     justify-content: start;
-    width: 0px;
+    width: 0vw;
     height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
     align-items: center;
     background-image: url('../images/Trilha\ vista\ topo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .markselect {
     display: none;
     position: absolute;
     background-image: url('../images/scratch\ mark.png');
-    width: 96px;
-    height: 96px;
+    width: 7vw;
+    height: 16vh;
     transform: rotate(-10deg);
 }
 
@@ -125,8 +129,8 @@ header .navbutton .menutext span {
 }
 
 .slidermenu-content .logo {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 1.7vh;
+    margin-bottom: 1.7vh;
 }
 
 .sections {
@@ -149,8 +153,8 @@ header .navbutton .menutext span {
     background-image: url('../images/Placa\ seção.png');
     background-size: contain;
     background-repeat: no-repeat;
-    width: 272px;
-    height: 144px;
+    width: 20vw;
+    height: 23vh;
     align-items: center;
     justify-content: center;
 }
@@ -158,19 +162,21 @@ header .navbutton .menutext span {
 .sections .section.selected {
     background-image: url('../images/Seção\ selecionada.png');
     background-repeat: no-repeat;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    width: 20vw;
+    height: 23vh;
+    margin-top: 0.9vh;
+    margin-bottom: 0.9vh;
 }
 
 .sections .section.selected a {
-    transform: translateY(+20px);
+    transform: translateY(+3.5vh);
 }
 
 a {
     font-family: "help me";
     font-weight: 400;
     font-style: normal;
-    font-size: 24px;
+    font-size: 1.8vw;
     color: black;
     text-decoration-line: none;
 }
@@ -181,11 +187,13 @@ a {
     justify-content: center;
     align-items: center;
     text-align: center;
-    transform: translateY(-20px);
+    transform: translateY(-3.5vh);
 }
 
 .subsections {
     display: none;
+    align-items: center;
+    justify-content: center;
 }
 
 .subsectionsnews {
@@ -207,8 +215,9 @@ a {
     align-items: center;
     background-image: url('../images/sub\ placa\ seção.png');
     background-repeat: no-repeat;
-    width: 212px;
-    height: 84px;
+    background-size: cover;
+    width: 15.5vw;
+    height: 13.8vh;
     text-align: center;
-    font-size: 18px;
+    font-size: 1.3vw;
 }
