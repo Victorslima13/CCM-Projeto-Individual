@@ -11,16 +11,12 @@
     font-size: 3vw;
     color: #95DB0D;
     position: relative;
-    top: 25vh;
+    bottom: 30vh;
 }
 
 /* From Uiverse.io by eslam-hany */
 .page {
     position: relative;
-    border-radius: 10px;
-    width: 220px;
-    height: 300px;
-    background-color: whitesmoke;
     -webkit-box-shadow: 1px 1px 12px #000;
     box-shadow: 1px 1px 12px #000;
     -webkit-transform: preserve-3d;
@@ -37,16 +33,14 @@
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    color: #000;
 }
 
 .bookcover {
     top: 0;
     position: absolute;
-    background-color: lightgray;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
+    background-image: url('../images/Livro Capa.png');
+    height: 87.8vh;
+    width: 54.2vw;
     cursor: pointer;
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
