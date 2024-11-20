@@ -32,6 +32,7 @@
 
 body {
     display: flex;
+    justify-content: center;
     flex-direction: row;
     background-image: url('../images/Floresta\ Sinistra\ Roxa.png');
     background-size: cover;

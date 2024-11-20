@@ -77,11 +77,26 @@
     </div>
 
     <div class="book">
-        <div class="page">
-            <div class="bookcover">
-                <div class="booktitle">Sobre os Catalogos</div>
-            </div>
-            <div class="bookcontent"></div>
+        <div class="booktitle">Sobre os Catalogos</div>
+        <ul class="bookcontent">
+            <li>
+                <div class="read on">
+                    <div class="bookcover"></div>
+                </div>
+            </li>
+            <li>
+                <div class="read">
+                    <div class="pageleft"></div>
+                    <div class="pageright"></div>
+                </div>
+            </li>
+            <li>
+                <div class="read"></div>
+            </li>
+        </ul>
+        <div class="buttonspage">
+            <button class="buttonpageleft" onclick="flippageback()"><img src="../images/Arrow left.png" alt="Seta para esquerda"></button>
+            <button class="buttonpageright" onclick="flippagenext()"><img src="../images/Arrow right.png" alt="Seta para direita"></button>
         </div>
     </div>
 </body>
@@ -89,4 +104,4 @@
 </html>
 
 <script src="../js/general.js"></script>
-<script src="../js/books.js"></script>
+<script src="../js/book.js"></script>
