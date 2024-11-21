@@ -107,6 +107,13 @@ header .navbutton .menutext span {
     background-image: url('../images/Trilha\ vista\ topo.png');
     background-repeat: no-repeat;
     background-size: cover;
+    z-index: 5;
+}
+
+.filter {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
 }
 
 .markselect {

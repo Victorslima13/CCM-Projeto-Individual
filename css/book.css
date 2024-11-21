@@ -1,4 +1,5 @@
 .book {
+    z-index: 3;
     position: relative;
     padding-left: 10vh;
     padding-top: 20vh;
@@ -10,7 +11,7 @@
     font-size: 3vw;
     color: #95DB0D;
     position: relative;
-    top: 20vh;
+    top: 15vh;
     z-index: 998
 }
 
@@ -30,7 +31,7 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    bottom: 12vh;
+    bottom: 8vh;
     padding: 0 2%;
 }
 
@@ -41,7 +42,7 @@
 }
 
 .buttonpageleft img {
-    display: none;
+    display: flex;
 }
 
 .buttonpageright {
@@ -58,7 +59,7 @@
     background-image: url('../images/Pagina\ livro.png');
     background-repeat: no-repeat;
     background-size: cover;
-    width: 47.3vw;
+    width: 45.3vw;
     height: 136.7vh;
 }
 
@@ -66,7 +67,7 @@
     background-image: url('../images/Pagina\ livro.png');
     background-repeat: no-repeat;
     background-size: cover;
-    width: 47.3vw;
+    width: 45.3vw;
     height: 136.7vh;
     transform: rotate(180deg);
 }
@@ -81,4 +82,10 @@ li {
 
 .read.on {
     display: flex;
+}
+
+p {
+    justify-self: center;
+    font-size: 2vw;
+    padding: 5%;
 }

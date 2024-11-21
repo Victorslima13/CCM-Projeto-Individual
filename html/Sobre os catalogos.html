@@ -37,33 +37,34 @@
     </header>
 
     <div id="dropmenu" class="slidermenu">
-        <div class="slidermenu-content">
-            <div class="logo">
-                <img src="../images/logo livro.png" alt="Logo do site">
-            </div>
-
-            <div class="sections">
-                <div id="linews" class="section selected">
-                    <a href="javascript:void(0);" onclick="opendropmenunews()">
-                        Destaques
-                    </a>
-                </div>
-                <div id="subsectionsnews" class="subsections">
-                    <a href="../html/Sobre os catalogos.html">Sobre os catalogos</a>
-                    <a href="">Novidades</a>
+        <div class="filter">
+            <div class="slidermenu-content">
+                <div class="logo">
+                    <img src="../images/logo livro.png" alt="Logo do site">
                 </div>
 
-                <div id="licomp" class="section">
-                    <a href="javascript:void(0);" onclick="opendropmenucomp()">
-                        Compendio
-                    </a>
-                </div>
-                <div id="subsectionscomp" class="subsections">
-                    <a href="">Catalogos</a>
-                    <a href="">Estatisticas</a>
-                </div>
+                <div class="sections">
+                    <div id="linews" class="section selected">
+                        <a href="javascript:void(0);" onclick="opendropmenunews()">
+                            Destaques
+                        </a>
+                    </div>
+                    <div id="subsectionsnews" class="subsections">
+                        <a href="../html/Sobre os catalogos.html">Sobre os catalogos</a>
+                        <a href="">Novidades</a>
+                    </div>
 
-                <!-- <div id="licamp" class="section">
+                    <div id="licomp" class="section">
+                        <a href="javascript:void(0);" onclick="opendropmenucomp()">
+                            Compendio
+                        </a>
+                    </div>
+                    <div id="subsectionscomp" class="subsections">
+                        <a href="">Catalogos</a>
+                        <a href="">Estatisticas</a>
+                    </div>
+
+                    <!-- <div id="licamp" class="section">
                     <a href="javascript:void(0);" onclick="opendropmenucamp()">
                         Contos da Fogueira
                     </a>
@@ -72,12 +73,13 @@
                     <a href="">a</a>
                     <a href="">b</a>
                 </div> -->
+                </div>
             </div>
         </div>
     </div>
 
     <div class="book">
-        <div class="booktitle">Sobre os Catalogos</div>
+        <div id="booktitle" class="booktitle">Sobre os Catalogos</div>
         <ul class="bookcontent">
             <li>
                 <div class="read on">
@@ -86,17 +88,42 @@
             </li>
             <li>
                 <div class="read">
-                    <div class="pageleft"></div>
+                    <div class="pageleft">
+                        <p>Sobre os Catalogos</p>
+                        <span style="color: red;">Atenção</span><br>
+                        <span>Todos os registros aqui neste campus são de proriedade do Compendio de Criaturas e
+                            Monstros S.A.</span><br>
+                        <div class="pagetext">Aqui neste primeiro livro estão todas as informações e regras a cerca do uso dos registros
+                            e livros do Compendio de Criaturas e Monstros, mas antes de qualquer coisa, muito cuidado
+                            com o conteudo destes livros.
+
+                            Os registros aqui servem tanto para conhecimento de sobrevivencia quanto contenção para
+                            algumas das criaturas e monstros nunca antes registrados.
+
+                            Os livros da CCM possuem tecnicas para que as informações não espalhem nenhum tipo de
+                            efeito, maleficio ou mal estar para os leitores.
+
+                            Leve muito a sério o conteudo nessas paginas, este conteudo pode salvar sua vida caso
+                            encontre algo nos estranhos campos dessa floresta que beira os limites da realidade.
+
+                            Nos outros livros que você encontrará por aqui conterão, informações sobre criaturas e
+                            monstros que outros viram e sobreviveram para contar historia.</div>
+                    </div>
                     <div class="pageright"></div>
                 </div>
             </li>
             <li>
-                <div class="read"></div>
+                <div class="read">
+                    <div class="pageleft"></div>
+                    <div class="pageright"></div>
+                </div>
             </li>
         </ul>
         <div class="buttonspage">
-            <button class="buttonpageleft" onclick="flippageback()"><img src="../images/Arrow left.png" alt="Seta para esquerda"></button>
-            <button class="buttonpageright" onclick="flippagenext()"><img src="../images/Arrow right.png" alt="Seta para direita"></button>
+            <button class="buttonpageleft" onclick="flippageback()"><img src="../images/Arrow left.png"
+                    alt="Seta para esquerda"></button>
+            <button class="buttonpageright" onclick="flippagenext()"><img src="../images/Arrow right.png"
+                    alt="Seta para direita"></button>
         </div>
     </div>
 </body>
