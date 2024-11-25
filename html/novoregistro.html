@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>CCM Login</title>
+     <link rel="stylesheet" href="../css/general.css">
+     <link rel="stylesheet" href="../css/register.css">
+</head>
+
+<body>
+     <header>
+          <div class="navbutton sidebar">
+               <a href="javascript:void(0);" onclick="openslidermenu()">
+                    <div id="traveller"><img src="../images/Andarilho menu.png" alt="Viajante fazendo trilha"></div>
+                    <div class="menutext">
+                         <span>MENU</span>
+                    </div>
+               </a>
+          </div>
+
+          <div class="handnote">
+               <span>COMPENDIO MULTIVERSAL</span>
+               <span>CRIATURAS E MONSTROS</span>
+          </div>
+
+          <div class="navbutton myprofile">
+               <a href="./cadastro.html">
+                    <img src="../images/sticky-notes 1.png" height="66px" width="66px" style="mix-blend-mode: lighten;"
+                         alt="Vetor de notas post-it">
+                    <div class="menutext">
+                         <span>Meu Perfil</span>
+                    </div>
+               </a>
+          </div>
+     </header>
+
+     <div id="dropmenu" class="slidermenu">
+          <div class="filter">
+               <div class="slidermenu-content">
+                    <div class="logo">
+                         <img src="../images/logo livro.png" alt="Logo do site">
+                    </div>
+
+                    <div class="sections">
+                         <div id="linews" class="section selected">
+                              <a href="javascript:void(0);" onclick="opendropmenunews()">
+                                   Destaques
+                              </a>
+                         </div>
+                         <div id="subsectionsnews" class="subsections">
+                              <a href="../html/Sobre os catalogos.html">Sobre os catalogos</a>
+                              <a href="">Novidades</a>
+                         </div>
+
+                         <div id="licomp" class="section">
+                              <a href="javascript:void(0);" onclick="opendropmenucomp()">
+                                   Compendio
+                              </a>
+                         </div>
+                         <div id="subsectionscomp" class="subsections">
+                              <a href="">Catalogos</a>
+                              <a href="">Estatisticas</a>
+                         </div>
+
+                         <!-- <div id="licamp" class="section">
+                    <a href="javascript:void(0);" onclick="opendropmenucamp()">
+                        Contos da Fogueira
+                    </a>
+                </div>
+                <div id="subsectionscamp" class="subsections">
+                    <a href="">a</a>
+                    <a href="">b</a>
+                </div> -->
+                    </div>
+               </div>
+          </div>
+     </div>
+
+     <div class="folder">
+          <div class="foldercontent">
+               <div class="box">
+                    <div class="inpcamp">
+                         Nome do ser: <br>
+                         <input type="text" name="" id="ipt_beingname">
+                    </div>
+                    <div class="checkcamp">
+                         Tipo de ser: <br>
+                         Criatura <input type="checkbox" name="" id="ipt_being">
+                         Monstro <input type="checkbox" name="" id="ipt_monster">
+                    </div>
+                    <div class="inpcamp">
+                         Raça: <br>
+                         <input type="text" name="" id="ipt_beingrace">
+                    </div>
+                    <div class="checkcamp">
+                         Universo Observado: <br>
+                         D&D <input type="checkbox" name="" id="ipt_DnD">
+                         T20 <input type="checkbox" name="" id="ipt_t20">
+                         Ordem P. <input type="checkbox" name="" id="ipt_Order">
+                         Outro <input type="checkbox" name="" id="ipt_otheru">
+                    </div>
+                    <div id="div_dnd" class="atribute"></div>
+                    <div id="div_t20" class="atribute"></div>
+                    <div id="div_order" class="atribute"></div>
+                    <div id="div_otheru" class="atribute"></div>
+               </div>
+          </div>
+          <div class="pagestatus">
+               <button onclick="register()">Registrar</button>
+               <div id="login" class="signupstatus"></div>
+               <div id="div_errorstatus"></div>
+          </div>
+     </div>
+     <div class="foldercover"></div>
+     </div>
+</body>
+
+</html>
+
+<script src="../js/general.js"></script>
+<script src="../js/register.js"></script>

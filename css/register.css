@@ -1,0 +1,137 @@
+.folder {
+     background-image: url('../images/folder\ open\ paper.png');
+     background-repeat: no-repeat;
+     background-size: cover;
+     height: 790px;
+     width: 1030px;
+     position: relative;
+     margin-top: 20vh;
+     margin-bottom: 5vh;
+     display: flex;
+     flex-direction: column;
+}
+
+.foldercontent {
+     height: 100%;
+     display: flex;
+     flex-direction: row;
+}
+
+.signupbutton {
+     position: relative;
+     left: 3%;
+}
+
+.foldercover {
+     background-image: url('../images/open\ cover\ folder.png');
+     background-repeat: no-repeat;
+     background-size: cover;
+     height: 68px;
+     width: 1066px;
+     align-self: center;
+}
+
+.pageinputs {
+     width: 55%;
+     display: flex;
+     margin-right: 8%;
+     flex-direction: column;
+}
+
+.title {
+     width: 45vw;
+     height: 19.7vh;
+     font-size: 2.3vw;
+     margin: 10% 0 0 10%;
+}
+
+.box {
+     padding: 2%;
+     height: 66.9vh;
+     width: 45vw;
+     border: 1px black solid;
+     margin: 1% 0 0 10%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+
+.box .title {
+     font-size: 2.7vw;
+     text-align: center;
+     margin: 3% 3% 0 3%;
+}
+
+.inpcamp {
+     padding: 5% 0 5% 0;
+     font-size: 1.5vw;
+     width: 100%;
+}
+
+.inpcamp input {
+     border: none;
+     border-radius: 1px;
+     background-color: #D9D9D9;
+     width: 100%;
+     height: 50px;
+     font-size: 1.2vw;
+}
+
+.pagestatus {
+     position: relative;
+     width: 45%;
+     height: 100%;
+     padding: 5%;
+     top: 5%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+
+.pagestatus button {
+     border: none;
+     border-radius: 5px;
+     background-color: #D9D9D9;
+     height: 15%;
+     width: 60%;
+     margin: 10%;
+     font-size: 1.5vw;
+     cursor: pointer;
+}
+
+.signupstatus {
+     border: 1px black solid;
+     border-radius: 1px;
+     width: 210px;
+     height: 210px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.accept {
+     background-image: url('../images/Aprovado.png');
+     background-repeat: no-repeat;
+     background-size: cover;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 190px;
+     width: 190px;
+}
+
+.reject {
+     background-image: url('../images/reprovado.png');
+     background-repeat: no-repeat;
+     background-size: cover;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 190px;
+     width: 190px;
+}
+
+.errortext {
+     font-size: 1vw;
+     color: red;
+}

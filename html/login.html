@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CCM Sobre os catalogos</title>
+    <title>CCM Login</title>
     <link rel="stylesheet" href="../css/general.css">
     <link rel="stylesheet" href="../css/openfolder.css">
 </head>
@@ -79,43 +79,35 @@
     </div>
 
     <div class="folder">
-        <div class="foldercover">
-            <div class="coverinputs">
+        <div class="foldercontent">
+            <div class="pageinputs">
                 <div class="title">
-                    Realize seu cadastro, faça parte da CCM e colabore com os registros!
+                    Olá caro observador, Faça login para acessar seus registros!!
                 </div>
-                <br><br>
-                <div class="inpcamp">
-                    Nome do usuário: <br>
-                    <input type="text" name="" id="ipt_username">
-                    <div id="div_username" class="errortext"></div>
-                </div>
-                <div class="inpcamp">
-                    E-mail: <br>
-                    <input type="text" name="" id="ipt_useremail">
-                    <div id="div_useremail" class="errortext"></div>
-                </div>
-                <div class="inpcamp">
-                    Senha: <br>
-                    <input type="text" name="" id="ipt_userpasw">
-                    <div id="div_userpasw" class="errortext"></div>
-                </div>
-                <div class="inpcamp">
-                    Confirme senha: <br>
-                    <input type="text" name="" id="ipt_confirmpasw">
-                    <div id="div_confirmpasw" class="errortext"></div>
+                <div class="box">
+                    <div class="title">Compendio de Criaturas e Monstros S.A.</div>
+                    <div class="inpcamp">
+                        E-mail: <br>
+                        <input type="text" name="" id="ipt_useremail">
+                    </div>
+                    <div class="inpcamp">
+                        Senha: <br>
+                        <input type="password" name="" id="ipt_userpasw">
+                    </div>
                 </div>
             </div>
-            <div class="coverstatus">
+            <div class="pagestatus">
                 <img src="../images/Carimbo logo.png" alt="Logo compendio estilo carimbo">
-                <button onclick="signup()">Cadastrar</button>
-                <div id="signup" class="signupstatus"></div>
+                <button onclick="login()">Logar</button>
+                <div id="login" class="signupstatus"></div>
+                <div id="div_errorstatus"></div>
             </div>
-            <a href="../html/cadastro.html" class="loginbutton">
-                <img src="../images/Cadastrar.png" height="88px" width="254px"
-                    alt="Seta diagonal para cima e direita para tela de login">
-            </a>
         </div>
+        <a href="../html/cadastro.html" class="signupbutton">
+            <img src="../images/Cadastrar.png" height="88px" width="254px"
+                alt="Seta diagonal para cima e direita para tela de login">
+        </a>
+        <div class="foldercover"></div>
     </div>
 </body>
 

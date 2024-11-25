@@ -31,6 +31,7 @@
 }
 
 .coverinputs {
+    width: 60%;
     display: flex;
     flex-direction: column;
 }
@@ -38,11 +39,11 @@
 .title {
     width: 34vw;
     padding: 2vw;
-    font-size: 1.6vw;
+    font-size: 2vw;
 }
 
 .inpcamp {
-    padding: 2% 5%;
+    padding: 4vh 5%;
     font-size: 1.5vw;
     width: 100%;
 }
@@ -58,7 +59,7 @@
 
 .coverstatus {
     position: relative;
-    width: 100%;
+    width: 40%;
     height: 90%;
     padding: 5%;
     top: 10%;
@@ -73,7 +74,7 @@
     background-color: #D9BE74;
     height: 15%;
     width: 80%;
-    margin: 10%;
+    margin: 5%;
     font-size: 1.5vw;
     cursor: pointer;
 }
