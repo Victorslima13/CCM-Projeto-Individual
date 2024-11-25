@@ -37,6 +37,7 @@ body {
     background-image: url('../images/Floresta\ Sinistra\ Roxa.png');
     background-size: cover;
     background-repeat: no-repeat;
+    height: fit-content;
 }
 
 body::-webkit-scrollbar{

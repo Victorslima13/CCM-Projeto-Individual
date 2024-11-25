@@ -1,7 +1,7 @@
 .book {
     z-index: 3;
     position: relative;
-    padding-left: 10vh;
+    padding-left: 8vh;
     padding-top: 20vh;
 }
 
@@ -31,7 +31,7 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    bottom: 8vh;
+    bottom: 8%;
     padding: 0 2%;
 }
 
@@ -56,20 +56,26 @@
 }
 
 .pageleft {
-    background-image: url('../images/Pagina\ livro.png');
+    background-image: url('../images/Pagina\ livro\ esq.png');
     background-repeat: no-repeat;
     background-size: cover;
     width: 45.3vw;
     height: 136.7vh;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
 }
 
 .pageright {
-    background-image: url('../images/Pagina\ livro.png');
+    background-image: url('../images/Pagina\ livro\ dir.png');
     background-repeat: no-repeat;
     background-size: cover;
+    transform: rotate(180deg);
     width: 45.3vw;
     height: 136.7vh;
-    transform: rotate(180deg);
+    padding: 5%;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 li {
@@ -84,8 +90,29 @@ li {
     display: flex;
 }
 
-p {
-    justify-self: center;
-    font-size: 2vw;
+h1 {
+    justify-content: center;
+    font-size: 3vw;
     padding: 5%;
+    text-align: center;
+    font-size: 3vw;
+}
+
+.pageleft span {
+    font-size: 1.3vw;
+    text-align: center;
+    justify-content: center;
+}
+
+.pagetext {
+    font-size: 1vw;
+    text-align: justify;
+}
+
+.pageright .pagetext {
+    transform: rotate(180deg);
+}
+
+h2 {
+    text-align: center;
 }
