@@ -80,45 +80,206 @@
 
      <div class="folder">
           <div class="foldercontent">
-               <div class="box main">
-                    <div class="camprow">
-                         <div class="inpcamp">
-                              Nome do ser: <br>
-                              <input type="text" name="" id="ipt_beingname">
+               <div class="uprow">
+                    <div class="box main">
+                         <div class="camprow">
+                              <div class="inpcamp">
+                                   *Nome do ser: <br>
+                                   <input maxlength="40" type="text" name="" id="ipt_beingname">
+                              </div>
+                              <div class="checkcamp">
+                                   *Tipo de ser: <br>
+                                   <div class="checks">
+                                        Criatura <input type="checkbox" name="" id="ipt_creature">
+                                        Monstro <input type="checkbox" name="" id="ipt_monster">
+                                   </div>
+                              </div>
                          </div>
-                         <div class="checkcamp">
-                              Tipo de ser: <br>
-                              <div class="checks">
-                                   Criatura <input type="checkbox" name="" id="ipt_being">
-                                   Monstro <input type="checkbox" name="" id="ipt_monster">
+                         <div class="camprow">
+                              <div class="inpcamp">
+                                   Raça: <br>
+                                   <input maxlength="40" type="text" name="" id="ipt_beingrace">
+                              </div>
+                              <div class="checkcamp">
+                                   *Universo Observado: <br>
+                                   <div class="checks">
+                                        D&D <input type="checkbox" checked name="" id="ipt_DnD" onclick="chkdnd()">
+                                        T20 <input type="checkbox" name="" id="ipt_t20" onclick="chkt20()">
+                                        OP. <input type="checkbox" name="" id="ipt_Order" onclick="chkop()">
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="generalatributes">
+                              *Atributos:
+                              <div id="div_dnd" class="box atribute dnd">
+                                   <div class="atricamps">
+                                        <div class="atributebox">
+                                             <input maxlength="5" type="number" class="atributeinp"
+                                                  id="ipt_strengthdnd">
+                                             <div class="box atriname">For</div>
+                                        </div>
+                                        <div class="atributebox">
+                                             <input maxlength="5" type="number" class="atributeinp" id="ipt_constdnd">
+                                             <div class="box atriname">Con</div>
+                                        </div>
+                                        <div class="atributebox">
+                                             <input maxlength="5" type="number" class="atributeinp" id="ipt_dextrydnd">
+                                             <div class="box atriname">Des</div>
+                                        </div>
+                                        <div class="atributebox">
+                                             <input maxlength="5" type="number" class="atributeinp" id="ipt_inteldnd">
+                                             <div class="box atriname">Int</div>
+                                        </div>
+                                        <div class="atributebox">
+                                             <input maxlength="5" type="number" class="atributeinp" id="ipt_wisdomdnd">
+                                             <div class="box atriname">Sab</div>
+                                        </div>
+                                        <div class="atributebox">
+                                             <input maxlength="5" type="number" class="atributeinp" id="ipt_charisdnd">
+                                             <div class="box atriname">Car</div>
+                                        </div>
+                                   </div>
+                                   <div class="beingstatus">
+                                        <div class="statuspoint">
+                                             <div class="atributebox">
+                                                  <input maxlength="3" type="number" class="atributeinp"
+                                                       id="ipt_dndlifepoint">
+                                                  <div class="box atriname">PV</div>
+                                             </div>
+                                             <div class="atributebox">
+                                                  <input maxlength="3" type="number" class="atributeinp"
+                                                       id="ipt_dndmanapoint">
+                                                  <div class="box atriname">PM</div>
+                                             </div>
+                                             <div class="atributebox">
+                                                  <input maxlength="3" type="number" class="atributeinp"
+                                                       id="ipt_dnddefpoint">
+                                                  <div class="box atriname">Def</div>
+                                             </div>
+                                        </div>
+                                        <div class="level">
+                                             Nivel: <input maxlength="4" type="number" class="box" id="ipt_dndlevel">
+                                        </div>
+                                   </div>
+                              </div>
+                              <div id="div_t20" class="box atribute t20">
+                                   <div class="atricamps">
+                                        <div class="atributebox">
+                                             <input maxlength="5" type="number" class="atributeinp"
+                                                  id="ipt_strengtht20">
+                                             <div class="box atriname">For</div>
+                                        </div>
+                                        <div class="atributebox">
+                                             <input maxlength="5" type="number" class="atributeinp" id="ipt_constt20">
+                                             <div class="box atriname">Con</div>
+                                        </div>
+                                        <div class="atributebox">
+                                             <input maxlength="5" type="number" class="atributeinp" id="ipt_dextryt20">
+                                             <div class="box atriname">Des</div>
+                                        </div>
+                                        <div class="atributebox">
+                                             <input maxlength="5" type="number" class="atributeinp" id="ipt_intelt20">
+                                             <div class="box atriname">Int</div>
+                                        </div>
+                                        <div class="atributebox">
+                                             <input maxlength="5" type="number" class="atributeinp" id="ipt_wisdomt20">
+                                             <div class="box atriname">Sab</div>
+                                        </div>
+                                        <div class="atributebox">
+                                             <input maxlength="5" type="number" class="atributeinp" id="ipt_charist20">
+                                             <div class="box atriname">Car</div>
+                                        </div>
+                                   </div>
+                                   <div class="beingstatus">
+                                        <div class="statuspoint">
+                                             <div class="atributebox">
+                                                  <input maxlength="3" type="number" class="atributeinp"
+                                                       id="ipt_t20lifepoint">
+                                                  <div class="box atriname">PV</div>
+                                             </div>
+                                             <div class="atributebox">
+                                                  <input maxlength="3" type="number" class="atributeinp"
+                                                       id="ipt_t20manapoint">
+                                                  <div class="box atriname">PM</div>
+                                             </div>
+                                             <div class="atributebox">
+                                                  <input maxlength="3" type="number" class="atributeinp"
+                                                       id="ipt_t20defpoint">
+                                                  <div class="box atriname">Def</div>
+                                             </div>
+                                        </div>
+                                        <div class="level">
+                                             Nivel: <input maxlength="4" type="number" class="box" id="ipt_t20level">
+                                        </div>
+                                   </div>
+                              </div>
+                              <div id="div_order" class="box atribute op">
+                                   <div class="atricamps">
+                                        <div class="atributebox">
+                                             <input maxlength="5" type="number" class="atributeinp" id="ipt_strengthop">
+                                             <div class="box atriname">For</div>
+                                        </div>
+                                        <div class="atributebox">
+                                             <input maxlength="5" type="number" class="atributeinp" id="ipt_agiop">
+                                             <div class="box atriname">Agi</div>
+                                        </div>
+                                        <div class="atributebox">
+                                             <input maxlength="5" type="number" class="atributeinp" id="ipt_intelop">
+                                             <div class="box atriname">Int</div>
+                                        </div>
+                                        <div class="atributebox">
+                                             <input maxlength="5" type="number" class="atributeinp" id="ipt_vigop">
+                                             <div class="box atriname">Vig</div>
+                                        </div>
+                                        <div class="atributebox">
+                                             <input maxlength="5" type="number" class="atributeinp" id="ipt_preop">
+                                             <div class="box atriname">Pre</div>
+                                        </div>
+                                   </div>
+                                   <div class="beingstatus">
+                                        <div class="statuspoint">
+                                             <div class="atributebox">
+                                                  <input maxlength="3" type="number" class="atributeinp"
+                                                       id="ipt_oplifepoint">
+                                                  <div class="box atriname">PV</div>
+                                             </div>
+                                             <div class="atributebox">
+                                                  <input maxlength="3" type="number" class="atributeinp"
+                                                       id="ipt_opdefpoint">
+                                                  <div class="box atriname">Def</div>
+                                             </div>
+                                        </div>
+                                        <div class="level">
+                                             VD: <input maxlength="4" type="number" class="box" id="ipt_oplevel">
+                                        </div>
+                                   </div>
                               </div>
                          </div>
                     </div>
-                    <div class="camprow">
-                         <div class="inpcamp">
-                              Raça: <br>
-                              <input type="text" name="" id="ipt_beingrace">
-                         </div>
-                         <div class="checkcamp">
-                              Universo Observado: <br>
-                              <div class="checks">
-                                   D&D <input type="checkbox" name="" id="ipt_DnD">
-                                   T20 <input type="checkbox" name="" id="ipt_t20">
-                                   OP. <input type="checkbox" name="" id="ipt_Order">
-                                   Outro <input type="checkbox" name="" id="ipt_otheru">
-                              </div>
-                         </div>
+                    <div class="pagestatus">
+                         <button onclick="register()">Registrar</button>
+                         <div id="register" class="registerstatus"></div>
+                         <div id="div_errorstatus" class="errortext"></div>
                     </div>
-                    <div id="div_dnd" class="atribute"></div>
-                    <div id="div_t20" class="atribute"></div>
-                    <div id="div_order" class="atribute"></div>
-                    <div id="div_otheru" class="atribute"></div>
                </div>
-               <div class="box describe"></div>
-               <div class="pagestatus">
-                    <button onclick="register()">Registrar</button>
-                    <div id="login" class="signupstatus"></div>
-                    <div id="div_errorstatus"></div>
+               <div class="downrow">
+                    <div class="box describe">
+                         Descrição:
+                         <div class="desccont">
+                              <div class="box desc">
+                                   <span>Físico:</span>
+                                   <textarea type="text" id="div_phisdesc"></textarea>
+                              </div>
+                              <div class="box desc">
+                                   <span>Comportamentos:</span>
+                                   <textarea type="text" id="div_compdesc"></textarea>
+                              </div>
+                              <div class="box desc">
+                                   <span>Mecânicas:</span>
+                                   <textarea type="text" id="div_mecandesc"></textarea>
+                              </div>
+                         </div>
+                    </div>
                </div>
           </div>
           <div class="foldercover"></div>

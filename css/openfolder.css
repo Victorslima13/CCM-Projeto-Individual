@@ -103,8 +103,8 @@
 .signupstatus {
     border: 1px black solid;
     border-radius: 1px;
-    width: 45%;
-    height: 30%;
+    width: 160px;
+    height: 160px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -117,8 +117,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 45%;
-    height: 60%;
+    width: 160px;
+    height: 160px;
 }
 
 .reject {
@@ -128,8 +128,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 45%;
-    height: 60%;
+    width: 160px;
+    height: 160px;
 }
 
 .errortext {

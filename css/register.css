@@ -14,7 +14,7 @@
 .foldercontent {
      height: 100%;
      display: flex;
-     flex-direction: row;
+     flex-direction: column;
 }
 
 .signupbutton {
@@ -32,18 +32,19 @@
 }
 
 .box {
+     width: fit-content;
+     height: fit-content;
      padding: 1%;
      border: 1px black solid;
-     margin: 5% 0 0 6%;
+     margin: 0 0 0 6%;
      display: flex;
      flex-direction: column;
 }
 
 .box.main {
-     width: 60%;
-     height: 40%;
+     width: 70%;
+     height: 70%;
      display: flex;
-     margin-right: 8%;
      flex-direction: column;
 }
 
@@ -54,7 +55,7 @@
 }
 
 .inpcamp {
-     padding: 1% 0 3% 0;
+     padding: 1% 0 2% 0;
      font-size: 1.5vw;
      width: 70%;
 }
@@ -66,12 +67,30 @@
      width: 100%;
      height: 50%;
      font-size: 1.2vw;
+     text-align: start;
 }
 
 .camprow {
      display: flex;
      align-items: center;
      justify-content: space-between;
+     height: 25%;
+}
+
+.uprow {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     width: 100%;
+     height: 45%;
+}
+
+.downrow {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     width: 100%;
+     height: 55%;
 }
 
 .checkcamp {
@@ -81,13 +100,208 @@
 }
 
 .checks {
-     font-size: 55%;
+     font-size: 50%;
 }
 
 .box.describe {
+     margin-right: 6%;
+     margin-bottom: 7%;
      width: 100%;
-     height: 40%;
+     height: 90%;
      display: flex;
-     margin-right: 8%;
      flex-direction: column;
+}
+
+.pagestatus {
+     position: relative;
+     width: 30%;
+     height: 100%;
+     padding: 1%;
+     top: 5%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+
+.pagestatus button {
+     border: none;
+     border-radius: 5px;
+     background-color: #D9D9D9;
+     height: 15%;
+     width: 60%;
+     margin: 5% 0 3% 0;
+     font-size: 1.5vw;
+     cursor: pointer;
+}
+
+.registerstatus {
+     border: 1px black solid;
+     border-radius: 1px;
+     width: 120px;
+     height: 120px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.accept {
+     background-image: url('../images/Aprovado.png');
+     background-repeat: no-repeat;
+     background-size: cover;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 120px;
+     height: 120px;
+}
+
+.reject {
+     background-image: url('../images/reprovado.png');
+     background-repeat: no-repeat;
+     background-size: cover;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 120px;
+     height: 120px;
+}
+
+.errortext {
+     margin: 2%;
+     width: 60%;
+     text-align: center;
+     font-size: 1vw;
+     color: red;
+}
+
+.desccont {
+     display: flex;
+     flex-direction: row;
+     margin: 1%;
+     height: 100%;
+}
+
+.box .desc {
+     margin: 0%;
+     width: 33%;
+     height: 100%;
+}
+
+.box .desc textarea {
+     border: none;
+     max-width: 100%;
+     max-height: 100%;
+     width: 100%;
+     height: 100%;
+     background-color: transparent;
+     box-sizing: border-box;
+     font-size: 1vw;
+     resize: none;
+}
+
+.generalatributes {
+     height: 50%;
+     width: 100%;
+}
+
+.atribute {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+}
+
+.box .atribute {
+     margin: 0%;
+     height: 90%;
+}
+
+.atricamps {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+}
+
+.box .atributebox {
+     margin: 0%;
+}
+
+.atributebox {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     height: 100%;
+     width: 25%;
+     margin: 3%;
+}
+
+.atributebox input {
+     height: 100%;
+     width: 90%;
+     font-size: 130%;
+     background-color: transparent;
+     border: 1px solid black;
+}
+
+.atriname {
+     font-size: 110%;
+     text-align: center;
+}
+
+.box.atriname {
+     border-radius: 3px;
+}
+
+.beingstatus {
+     display: flex;
+     flex-direction: column;
+     height: 100%;
+}
+
+.statuspoint {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+     height: 80%;
+}
+
+.level {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     padding: 0%;
+     height: auto;
+     justify-content: space-evenly;
+}
+
+.level .box {
+     margin: 0%;
+}
+
+.level input {
+     width: 40%;
+     height: 80%;
+     background-color: transparent;
+}
+
+input {
+     text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.dnd {
+     display: flex;
+}
+
+.t20 {
+     display: none;
+}
+
+.op {
+     display: none;
 }
