@@ -66,7 +66,7 @@ function login() {
     var useremail = ipt_useremail.value
     var userpasw = ipt_userpasw.value
     
-    if (useremail != ' ' && userpasw != ' ') {
+    if (useremail != '' && userpasw != '') {
         email = true
         pasw = true
 

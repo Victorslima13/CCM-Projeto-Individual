@@ -4,7 +4,7 @@
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>CCM Login</title>
+     <title>CCM Meu Registro</title>
      <link rel="stylesheet" href="../css/general.css">
      <link rel="stylesheet" href="../css/register.css">
 </head>
@@ -80,40 +80,48 @@
 
      <div class="folder">
           <div class="foldercontent">
-               <div class="box">
-                    <div class="inpcamp">
-                         Nome do ser: <br>
-                         <input type="text" name="" id="ipt_beingname">
+               <div class="box main">
+                    <div class="camprow">
+                         <div class="inpcamp">
+                              Nome do ser: <br>
+                              <input type="text" name="" id="ipt_beingname">
+                         </div>
+                         <div class="checkcamp">
+                              Tipo de ser: <br>
+                              <div class="checks">
+                                   Criatura <input type="checkbox" name="" id="ipt_being">
+                                   Monstro <input type="checkbox" name="" id="ipt_monster">
+                              </div>
+                         </div>
                     </div>
-                    <div class="checkcamp">
-                         Tipo de ser: <br>
-                         Criatura <input type="checkbox" name="" id="ipt_being">
-                         Monstro <input type="checkbox" name="" id="ipt_monster">
-                    </div>
-                    <div class="inpcamp">
-                         Raça: <br>
-                         <input type="text" name="" id="ipt_beingrace">
-                    </div>
-                    <div class="checkcamp">
-                         Universo Observado: <br>
-                         D&D <input type="checkbox" name="" id="ipt_DnD">
-                         T20 <input type="checkbox" name="" id="ipt_t20">
-                         Ordem P. <input type="checkbox" name="" id="ipt_Order">
-                         Outro <input type="checkbox" name="" id="ipt_otheru">
+                    <div class="camprow">
+                         <div class="inpcamp">
+                              Raça: <br>
+                              <input type="text" name="" id="ipt_beingrace">
+                         </div>
+                         <div class="checkcamp">
+                              Universo Observado: <br>
+                              <div class="checks">
+                                   D&D <input type="checkbox" name="" id="ipt_DnD">
+                                   T20 <input type="checkbox" name="" id="ipt_t20">
+                                   OP. <input type="checkbox" name="" id="ipt_Order">
+                                   Outro <input type="checkbox" name="" id="ipt_otheru">
+                              </div>
+                         </div>
                     </div>
                     <div id="div_dnd" class="atribute"></div>
                     <div id="div_t20" class="atribute"></div>
                     <div id="div_order" class="atribute"></div>
                     <div id="div_otheru" class="atribute"></div>
                </div>
+               <div class="box describe"></div>
+               <div class="pagestatus">
+                    <button onclick="register()">Registrar</button>
+                    <div id="login" class="signupstatus"></div>
+                    <div id="div_errorstatus"></div>
+               </div>
           </div>
-          <div class="pagestatus">
-               <button onclick="register()">Registrar</button>
-               <div id="login" class="signupstatus"></div>
-               <div id="div_errorstatus"></div>
-          </div>
-     </div>
-     <div class="foldercover"></div>
+          <div class="foldercover"></div>
      </div>
 </body>
 

@@ -32,6 +32,7 @@
 
 .coverinputs {
     width: 60%;
+    height: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -43,7 +44,7 @@
 }
 
 .inpcamp {
-    padding: 4vh 5%;
+    padding: 4% 5%;
     font-size: 1.5vw;
     width: 100%;
 }
