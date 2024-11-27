@@ -1,0 +1,118 @@
+.folder {
+    background-image: url('../images/folder\ open\ paper.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 790px;
+    width: 1030px;
+    position: relative;
+    margin-top: 20vh;
+    margin-bottom: 5vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.loginbutton {
+    align-self: self-end;
+    position: relative;
+    top: 4%;
+    right: 3%;
+}
+
+.foldercover {
+    background-image: url('../images/cover\ folder.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 728px;
+    width: 1030px;
+    display: flex;
+    flex-direction: row;
+    bottom: 0px;
+    position: relative;
+}
+
+.coverinputs {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    width: 34vw;
+    padding: 2vw;
+    font-size: 2vw;
+}
+
+.inpcamp {
+    padding: 3% 5%;
+    font-size: 1.5vw;
+    width: 100%;
+}
+
+.inpcamp input {
+    border: none;
+    border-radius: 3px;
+    background-color: #D9BE74;
+    width: 100%;
+    height: 50px;
+    font-size: 1.2vw;
+}
+
+.coverstatus {
+    position: relative;
+    width: 40%;
+    height: 90%;
+    padding: 5%;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.coverstatus button {
+    border: none;
+    border-radius: 5px;
+    background-color: #D9BE74;
+    height: 15%;
+    width: 80%;
+    margin: 5%;
+    font-size: 1.5vw;
+    cursor: pointer;
+}
+
+.signupstatus {
+    border: 2px #D9BE74 solid;
+    border-radius: 1px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accept {
+    background-image: url('../images/Aprovado.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 190px;
+    width: 190px;
+}
+
+.reject {
+    background-image: url('../images/reprovado.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 190px;
+    width: 190px;
+}
+
+.errortext {
+    font-size: 1vw;
+    color: red;
+}

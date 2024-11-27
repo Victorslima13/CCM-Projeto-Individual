@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CCM Login</title>
-    <link rel="stylesheet" href="../css/general.css">
-    <link rel="stylesheet" href="../css/openfolder.css">
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/openfolder.css">
 </head>
 
 <body>
     <header>
         <div class="navbutton sidebar">
             <a href="javascript:void(0);" onclick="openslidermenu()">
-                <div id="traveller"><img src="../images/Andarilho menu.png" alt="Viajante fazendo trilha"></div>
+                <div id="traveller"><img src="./images/Andarilho menu.png" alt="Viajante fazendo trilha"></div>
                 <div class="menutext">
                     <span>MENU</span>
                 </div>
@@ -27,7 +27,7 @@
 
         <div class="navbutton myprofile">
             <a href="./cadastro.html">
-                <img src="../images/sticky-notes 1.png" height="66px" width="66px" style="mix-blend-mode: lighten;"
+                <img src="./images/sticky-notes 1.png" height="66px" width="66px" style="mix-blend-mode: lighten;"
                     alt="Vetor de notas post-it">
                 <div class="menutext">
                     <span>Meu Perfil</span>
@@ -40,7 +40,7 @@
         <div class="filter">
             <div class="slidermenu-content">
                 <div class="logo">
-                    <img src="../images/logo livro.png" alt="Logo do site">
+                    <img src="./images/logo livro.png" alt="Logo do site">
                 </div>
 
                 <div class="sections">
@@ -50,7 +50,7 @@
                         </a>
                     </div>
                     <div id="subsectionsnews" class="subsections">
-                        <a href="../html/Sobre os catalogos.html">Sobre os catalogos</a>
+                        <a href="./html/Sobre os catalogos.html">Sobre os catalogos</a>
                         <a href="">Novidades</a>
                     </div>
 
@@ -97,14 +97,14 @@
                 </div>
             </div>
             <div class="pagestatus">
-                <img src="../images/Carimbo logo.png" alt="Logo compendio estilo carimbo">
+                <img src="./images/Carimbo logo.png" alt="Logo compendio estilo carimbo">
                 <button onclick="entrar()">Logar</button>
                 <div id="login" class="signupstatus"></div>
                 <div id="div_errorstatus" class="errortext"></div>
             </div>
         </div>
-        <a href="../html/cadastro.html" class="signupbutton">
-            <img src="../images/Cadastrar.png" height="88px" width="254px"
+        <a href="./html/cadastro.html" class="signupbutton">
+            <img src="./images/Cadastrar.png" height="88px" width="254px"
                 alt="Seta diagonal para cima e direita para tela de login">
         </a>
         <div class="foldercover"></div>
@@ -113,68 +113,5 @@
 
 </html>
 
-<script src="../js/general.js"></script>
-<script src="../js/folder.js"></script>
-
-<script>
-
-
-    function entrar() {
-
-        var emailVar = ipt_useremail.value;
-        var senhaVar = ipt_userpasw.value;
-
-        if (emailVar == "" || senhaVar == "") {
-            alert('validacoes');
-        } else {
-            
-            console.log("FORM LOGIN: ", emailVar);
-            console.log("FORM SENHA: ", senhaVar);
-    
-            fetch("/usuarios/autenticar", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    emailServer: emailVar,
-                    senhaServer: senhaVar
-                })
-            }).then(function (resposta) {
-                console.log("ESTOU NO THEN DO entrar()!")
-    
-                if (resposta.ok) {
-                    console.log(resposta);
-                    resposta.json().then(json => {
-                        console.log(json);
-                        console.log(JSON.stringify(json));
-                        sessionStorage.EMAIL_USUARIO = json.email;
-                        sessionStorage.ID_USUARIO = json.id;
-
-                        setTimeout(function () {
-                            window.location = "./dashboard/cards.html";
-                        }, 1000); // apenas para exibir o loading
-    
-                    });
-    
-                } else {
-                    console.log("Houve um erro ao tentar realizar o login!");
-    
-                    resposta.text().then(texto => {
-                        console.error(texto);
-                    });
-                }
-            }).catch(function (erro) {
-                console.log(erro);
-            })
-    
-            return false;
-        }
-
-    }
-
-    function sumirMensagem() {
-        cardErro.style.display = "none"
-    }
-
-</script>
+<script src="./js/general.js"></script>
+<script src="./js/folder.js"></script>

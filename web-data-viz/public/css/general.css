@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+@font-face {
+    font-family: "help me";
+    src: url('../fontes/help_me/HelpMe.ttf');
+}
+
+.HelpMe {
+    font-family: "help me";
+    font-weight: 400;
+    font-style: normal;
+}
+
+.special-elite-regular {
+    font-family: "Special Elite", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    --header-height: 18vh;
+}
+
+* {
+    font-family: "Special Elite";
+    font-weight: 400;
+    font-style: normal;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    background-image: url('../images/Floresta\ Sinistra\ Roxa.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: fit-content;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+header {
+    background-image: url('../images/Placa.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: var(--header-height);
+    position: fixed;
+    top: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 999;
+}
+
+header .handnote {
+    display: flex;
+    flex-direction: column;
+}
+
+header .handnote span {
+    font-family: "help me";
+    font-size: 6.5vh;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+header .navbutton a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .navbutton .menutext span {
+    font-family: "help me";
+    font-size: 1.8vw;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+.navbutton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.slidermenu {
+    transition: 0.2s;
+    display: block;
+    position: fixed;
+    left: 0vw;
+    flex-direction: column;
+    justify-content: start;
+    width: 0vw;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    align-items: center;
+    background-image: url('../images/Trilha\ vista\ topo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 5;
+}
+
+.filter {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+}
+
+.markselect {
+    display: none;
+    position: absolute;
+    background-image: url('../images/scratch\ mark.png');
+    width: 7vw;
+    height: 16vh;
+    transform: rotate(-10deg);
+}
+
+.slidermenu::-webkit-scrollbar {
+    display: none;
+}
+
+.slidermenu-content {
+    padding-top: var(--header-height);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slidermenu-content .logo {
+    margin-top: 1.7vh;
+    margin-bottom: 1.7vh;
+}
+
+.sections {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section:hover div{
+    display: block;
+}
+
+.sections .section {
+    display: flex;
+    flex-direction: column;
+}
+
+.sections .section {
+    background-image: url('../images/Placa\ seção.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20vw;
+    height: 23vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.sections .section.selected {
+    background-image: url('../images/Seção\ selecionada.png');
+    background-repeat: no-repeat;
+    width: 20vw;
+    height: 23vh;
+    margin-top: 0.9vh;
+    margin-bottom: 0.9vh;
+}
+
+.sections .section.selected a {
+    transform: translateY(+3.5vh);
+}
+
+a {
+    font-family: "help me";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.8vw;
+    color: black;
+    text-decoration-line: none;
+}
+
+.section a {
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translateY(-3.5vh);
+}
+
+.subsections {
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.subsectionsnews {
+    display: block;
+}
+
+.subsectionscomp {
+    display: none;
+}
+
+.subsectionscamp {
+    display: none;
+}
+
+.subsections a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/sub\ placa\ seção.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 15.5vw;
+    height: 13.8vh;
+    text-align: center;
+    font-size: 1.3vw;
+}

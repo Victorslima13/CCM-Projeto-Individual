@@ -1,0 +1,118 @@
+.book {
+    z-index: 3;
+    position: relative;
+    padding-left: 8vh;
+    padding-top: 20vh;
+}
+
+.booktitle {
+    display: flex;
+    justify-content: center;
+    font-size: 3vw;
+    color: #95DB0D;
+    position: relative;
+    top: 15vh;
+    z-index: 998
+}
+
+.bookcover {
+    position: relative;
+    display: flex;
+    background-image: url('../images/capa\ livro.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+    justify-content: center;
+    position: relative;
+    height: 830px;
+    width: 660px;
+}
+
+.buttonspage {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    bottom: 8%;
+    padding: 0 2%;
+}
+
+.buttonpageleft {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.buttonpageleft img {
+    display: flex;
+}
+
+.buttonpageright {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.buttonpageright img {
+    display: flex;
+}
+
+.pageleft {
+    background-image: url('../images/Pagina\ livro\ esq.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 45.3vw;
+    height: 136.7vh;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.pageright {
+    background-image: url('../images/Pagina\ livro\ dir.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotate(180deg);
+    width: 45.3vw;
+    height: 136.7vh;
+    padding: 5%;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+li {
+    list-style: none;
+}
+
+.read {
+    display: none;
+}
+
+.read.on {
+    display: flex;
+}
+
+h1 {
+    justify-content: center;
+    font-size: 3vw;
+    padding: 5%;
+    text-align: center;
+    font-size: 3vw;
+}
+
+.pageleft span {
+    font-size: 1.3vw;
+    text-align: center;
+    justify-content: center;
+}
+
+.pagetext {
+    font-size: 1vw;
+    text-align: justify;
+}
+
+.pageright .pagetext {
+    transform: rotate(180deg);
+}
+
+h2 {
+    text-align: center;
+}
