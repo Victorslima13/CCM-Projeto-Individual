@@ -7,6 +7,7 @@
   <title>CCM Cadastro</title>
   <link rel="stylesheet" href="./css/general.css">
   <link rel="stylesheet" href="./css/folder.css">
+  <link rel="stylesheet" href="./css/profilemenu.css">
 </head>
 
 <body>
@@ -26,7 +27,7 @@
     </div>
 
     <div class="navbutton myprofile">
-      <a href="./cadastro.html">
+      <a href="javascript:void(0);" onclick="myprofile()">
         <img src="./images/sticky-notes 1.png" height="66px" width="66px" style="mix-blend-mode: lighten;"
           alt="Vetor de notas post-it">
         <div class="menutext">
@@ -35,6 +36,44 @@
       </a>
     </div>
   </header>
+
+  <div id="profilecard" class="profilecard">
+    <div class="filter">
+      <div class="card">
+        Menu de alteração de informações do usuário!
+        <div class="cardinpfield">
+          Nome do Usuário:
+          <input type="text" name="" id="ipt_usernameupd">
+          <div class="carderrortext" id="div_userupderror"></div>
+        </div>
+        <div class="cardinpfield">
+          E-mail:
+          <input type="text" name="" id="ipt_useremailupd">
+          <div class="carderrortext" id="div_emailupderror"></div>
+        </div>
+        <div class="cardinpfield">
+          Senha Atual:
+          <input type="text" name="" id="ipt_curruserpasw">
+          <div class="carderrortext" id="div_curpaswerror"></div>
+        </div>
+        <div class="cardinpfield">
+          Nova Senha:
+          <input type="text" name="" id="ipt_userpaswupd">
+          <div class="carderrortext" id="div_paswupderror"></div>
+        </div>
+        <div class="cardinpfield">
+          Confirme a senha:
+          <input type="text" name="" id="ipt_confirmpaswupd">
+          <div class="carderrortext" id="div_confirmerror"></div>
+        </div>
+        <div class="cardbuttons">
+          <button onclick="updateuserinfo()">Salvar Alterações</button>
+          <button onclick="pagelocate()">Novo registro</button>
+          <button onclick="logout()">Deslogar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div id="dropmenu" class="slidermenu">
     <div class="filter">

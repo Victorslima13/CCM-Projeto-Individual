@@ -56,7 +56,7 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    z-index: 999;
+    z-index: 998;
 }
 
 header .handnote {

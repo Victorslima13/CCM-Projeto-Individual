@@ -17,6 +17,7 @@ var app = express();
 
 var usuarioRouter = require("./src/routes/usuarios");
 var registroRouter = require("./src/routes/registro");
+var dashgraphRouter = require("./src/routes/dashgraph");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -26,6 +27,7 @@ app.use(cors());
 
 app.use("/usuarios", usuarioRouter);
 app.use("/registro", registroRouter);
+app.use("/dashgraph", dashgraphRouter);
 app.listen(PORTA_APP, function () {
     console.log(`
     ##   ##  ######   #####             ####       ##     ######     ##              ##  ##    ####    ######  

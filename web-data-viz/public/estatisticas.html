@@ -7,6 +7,7 @@
     <title>CCM Estatisticas</title>
     <link rel="stylesheet" href="./css/general.css">
     <link rel="stylesheet" href="./css/book.css">
+    <link rel="stylesheet" href="../css/profilemenu.css">
 </head>
 
 <body>
@@ -35,6 +36,44 @@
             </a>
         </div>
     </header>
+
+    <div id="profilecard" class="profilecard">
+        <div class="filter">
+            <div class="card">
+                Menu de alteração de informações do usuário!
+                <div class="cardinpfield">
+                    Nome do Usuário:
+                    <input type="text" name="" id="ipt_usernameupd">
+                    <div class="carderrortext" id="div_userupderror"></div>
+                </div>
+                <div class="cardinpfield">
+                    E-mail:
+                    <input type="text" name="" id="ipt_useremailupd">
+                    <div class="carderrortext" id="div_emailupderror"></div>
+                </div>
+                <div class="cardinpfield">
+                    Senha Atual:
+                    <input type="text" name="" id="ipt_curruserpasw">
+                    <div class="carderrortext" id="div_curpaswerror"></div>
+                </div>
+                <div class="cardinpfield">
+                    Nova Senha:
+                    <input type="text" name="" id="ipt_userpaswupd">
+                    <div class="carderrortext" id="div_paswupderror"></div>
+                </div>
+                <div class="cardinpfield">
+                    Confirme a senha:
+                    <input type="text" name="" id="ipt_confirmpaswupd">
+                    <div class="carderrortext" id="div_confirmerror"></div>
+                </div>
+                <div class="cardbuttons">
+                    <button onclick="updateuserinfo()">Salvar Alterações</button>
+                    <button onclick="pagelocate()">Novo registro</button>
+                    <button onclick="logout()">Deslogar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div id="dropmenu" class="slidermenu">
         <div class="filter">
@@ -94,13 +133,16 @@
                             Nesta pagina voce encontrara algumas informações a respeito dos registros em geral.
                         </div>
                         <div class="kpis">
-                        <h2>Universo mais explorado</h2>
-                        <h2>Universo menos explorado</h2>
+                            <div class="kipbox">
+                                <h2>Universo mais explorado</h2>
+                            </div>
+                            <div class="kipbox">
+                                <h2>Universo menos explorado</h2>
+                            </div>
                         </div>
                         <div class="grafico">
-                            <h3>Quantidade de Criaturas atualmente:</h3>
-                            <h3>Quantidade de Monstros atualmente:</h3>
-                            <h3>Quantidade de Criaturas Monstros atualmente:</h3>
+                            <h3>Quantidade de Criaturas e Monstros existentes:</h3>
+                            <canvas id="graphchart"></canvas>
                         </div>
                     </div>
                     <div class="pageright">
@@ -121,7 +163,7 @@
                             <h3>Criaturas T20</h3>
                             <h3>Monstros T20</h3>
                             <h3>Criaturas Monstros T20</h3>
-                            
+
                             <h3>Criaturas O.P</h3>
                             <h3>Monstros O.P</h3>
                             <h3>Criaturas Monstros O.P</h3>
@@ -129,7 +171,7 @@
                     </div>
                 </div>
             </li>
-            
+
             <li id="personal">
                 <div class="read">
                     <div class="pageleft">
@@ -157,3 +199,4 @@
 <script src="./js/general.js"></script>
 <script src="./js/book.js"></script>
 <script src="./js/status.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
