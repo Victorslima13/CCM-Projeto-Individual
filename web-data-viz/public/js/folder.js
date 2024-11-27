@@ -1,12 +1,4 @@
 function cadastrar() {
-    // {
-    //   if (!sessionStorage == "" || !sessionStorage.ID_USUARIO == "") {
-    //     alert("Seu login foi realizado com sucesso!");
-    //   }
-
-    //   alert("Cadê o seu id?");
-    // }
-    
     var user = false
     var email = false
     var pasw = false
@@ -54,7 +46,7 @@ function cadastrar() {
         }
 
         var characters = [
-            "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "-", "=", 
+            "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "-", "=",
             "{", "}", "[", "]", "|", "\\", ":", '"', "'", ";", "<", ">", ",", ".", "/", "?", "`"
         ];
 
@@ -65,8 +57,8 @@ function cadastrar() {
                 charincluded = true;
             }
         }
-        
-        if (charincluded) {
+
+        if (charincluded && senhaVar != lowerpasw && senhaVar != upperpasw) {
             div_userpasw.innerHTML = ""
             if (senhaVar == confirmacaoSenhaVar) {
                 pasw = true
@@ -90,16 +82,24 @@ function cadastrar() {
                     senhaServer: senhaVar
                 }),
             })
-            .then(function (resposta) {
-                console.log("resposta: ", resposta);
-                setTimeout(() => {
-                    window.location = "login.html"
-                }, "2000")
-                    
+                .then(function (resposta) {
+                    console.log("resposta: ", resposta);
+
+                    if (resposta.ok) {
+                        document.getElementById("signup").classList = "signupstatus accept"
+
+                        setTimeout(() => {
+                            window.location = "login.html"
+                        }, "2000")
+                    } else {
+                        if (resposta == '') { }
+                        console.log("Houve um erro ao tentar realizar o cadastro!");
+
+                        document.getElementById("sigunp").classList = "signupstatus reject"
+                    }
                 })
                 .catch(function (resposta) {
                     console.log(`#ERRO: ${resposta}`);
-                    document.getElementById("signup").classList = "signupstatus accept"
                 });
         }
         return false;
@@ -125,22 +125,18 @@ function entrar() {
             })
         }).then(function (resposta) {
             if (resposta.ok) {
-                console.log(resposta);
+                document.getElementById("login").classList = "signupstatus accept"
+                div_errorstatus.innerHTML = ``
+
+                setTimeout(() => {
+                    window.location = "novoregistro.html"
+                }, "2000")
+
                 resposta.json().then(json => {
                     console.log(json);
                     console.log(JSON.stringify(json));
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.ID_USUARIO = json.id;
-
-                    resposta.text().then(texto => {
-                        document.getElementById("login").classList = "signupstatus accept"
-                        div_errorstatus.innerHTML = ``
-                    });
-
-                    setTimeout(() => {
-                        window.location = "novoregistro.html"
-                    }, "2000")
-
                 });
 
             } else {
@@ -152,6 +148,7 @@ function entrar() {
         }).catch(function (erro) {
             div_errorstatus.innerHTML = `Email ou senha inválido.`
             document.getElementById("login").classList = "signupstatus reject"
+            console.log(erro);
         })
 
         return false;
