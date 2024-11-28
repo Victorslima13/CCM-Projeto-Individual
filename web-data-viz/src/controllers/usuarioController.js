@@ -47,7 +47,32 @@ function cadastrar(req, res) {
         );
 }
 
+function atualizarusuario(req, res) {
+    var nome = req.body.nomeServer;
+    var email = req.body.emailServer;
+    var senha = req.body.senhaServer;
+    var asenha = req.body.antigasenhaServer;
+    var perfil = req.body.profileServer;
+
+    usuarioModel.atualizarusuario(nome, email, senha, asenha, perfil)
+        .then(
+            function (resultado) {
+                res.json(resultado);
+            }
+        ).catch(
+            function (erro) {
+                console.log(erro);
+                console.log(
+                    "\nHouve um erro ao atualizar os dados! Erro: ",
+                    erro.sqlMessage
+                );
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
+
 module.exports = {
     autenticar,
-    cadastrar
+    cadastrar,
+    atualizarusuario
 }

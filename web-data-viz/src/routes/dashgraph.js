@@ -3,6 +3,12 @@ var router = express.Router();
 
 var dashgraphController = require("../controllers/dashgraphController");
 
-router.get("/atualizardados", function (req, res) {
-    dashgraphController.atualizardados(req, res);
+router.get("/dashtake", function (req, res) {
+    dashgraphController.dashtake(req, res);
 })
+
+router.get("/dashbargraph/:universo/:tipo", function (req, res) {
+    dashgraphController.dashbargraph(req, res);
+})
+
+module.exports = router;

@@ -66,3 +66,8 @@
     align-items: center;
     justify-content: center;
 }
+
+.carderrortext {
+    color: red;
+    font-size: 12px;
+}

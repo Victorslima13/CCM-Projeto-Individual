@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../css/profilemenu.css">
 </head>
 
-<body>
+<body onload="pulldata()">
     <header>
         <div class="navbutton sidebar">
             <a href="javascript:void(0);" onclick="openslidermenu()">
@@ -27,7 +27,7 @@
         </div>
 
         <div class="navbutton myprofile">
-            <a href="./cadastro.html">
+            <a href="javascript:void(0);" onclick="myprofile()">
                 <img src="./images/sticky-notes 1.png" height="66px" width="66px" style="mix-blend-mode: lighten;"
                     alt="Vetor de notas post-it">
                 <div class="menutext">
@@ -89,7 +89,7 @@
                         </a>
                     </div>
                     <div id="subsectionsnews" class="subsections">
-                        <a href="./Sobre os catalogos.html">Sobre os catalogos</a>
+                        <a href="./index.html">Sobre os catalogos</a>
                         <a href="">Novidades</a>
                     </div>
 
@@ -134,39 +134,27 @@
                         </div>
                         <div class="kpis">
                             <div class="kipbox">
-                                <h2>Universo mais explorado</h2>
+                                <h2 id="higheruni"></h2>
                             </div>
                             <div class="kipbox">
-                                <h2>Universo menos explorado</h2>
+                                <h2 id="loweruni">Universo menos explorado</h2>
                             </div>
                         </div>
                         <div class="grafico">
-                            <h3>Quantidade de Criaturas e Monstros existentes:</h3>
                             <canvas id="graphchart"></canvas>
                         </div>
                     </div>
                     <div class="pageright">
-                        <h1>Informações por universo</h1>
                         <div class="pagetext">
+                            <h1>Informações por universo</h1>
                             Aqui temos informações filtradas por universo explorado.
-                        </div>
-                        <div class="kpis">
-                            <h2>Seres de D&D</h2>
-                            <h2>Seres de T20</h2>
-                            <h2>Seres de Ordem P.</h2>
-                        </div>
-                        <div class="grafico">
-                            <h3>Criaturas D&D</h3>
-                            <h3>Monstros D&D</h3>
-                            <h3>Criaturas Monstros D&D</h3>
-
-                            <h3>Criaturas T20</h3>
-                            <h3>Monstros T20</h3>
-                            <h3>Criaturas Monstros T20</h3>
-
-                            <h3>Criaturas O.P</h3>
-                            <h3>Monstros O.P</h3>
-                            <h3>Criaturas Monstros O.P</h3>
+                            <div class="kpis">
+                                <h2>Seres de D&D</h2>
+                                <h2>Seres de T20</h2>
+                                <h2>Seres de Ordem P.</h2>
+                            </div>
+                            <div class="grafico">
+                            </div>
                         </div>
                     </div>
                 </div>

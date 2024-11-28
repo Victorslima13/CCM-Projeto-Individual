@@ -5,18 +5,16 @@ document.querySelector('.filter').addEventListener('click', function(event) {
 });
 
 function myprofile() {
-    var profile = sessionStorage.ID_USUARIO
-    
-    if (profile == undefined) {
-        window.location = 'cadastro.html'
-    } else {
-        var profile = document.getElementById("profilecard").style.display
+    if (sessionStorage.ID_USUARIO != undefined) {
+        var profilecard = document.getElementById("profilecard").style.display
         
-        if (profile == 'none') {
+        if (profilecard == 'none') {
             document.getElementById('profilecard').style.display = 'flex'
         } else {
             document.getElementById('profilecard').style.display = 'none'
         }
+    } else {
+        window.location = 'cadastro.html'
     }
 }
 
@@ -100,7 +98,7 @@ function updateuserinfo() {
 
             if (user && email && pasw) {
                 fetch("/usuarios/atualizarusuario", {
-                    method: "POST",
+                    method: "PUT",
                     headers: {
                         "Content-Type": "application/json",
                     },
@@ -108,7 +106,8 @@ function updateuserinfo() {
                         nomeServer: userupd,
                         emailServer: emailupd,
                         senhaServer: paswupd,
-                        antigasenhaServer: curpasw
+                        antigasenhaServer: curpasw,
+                        profileServer: profile
                     }),
                 })
                     .then(function (resposta) {
@@ -118,7 +117,7 @@ function updateuserinfo() {
                             sessionStorage.clear()
                             setTimeout(() => {
                                 window.location = "login.html"
-                            }, "2000")
+                            }, "1000")
                         } else {
                             if (resposta == '') { }
                             console.log("Houve um erro ao tentar atualizar os dados!");

@@ -66,7 +66,7 @@ function register() {
         var dp = ipt_t20defpoint.value
         var lvl = ipt_t20level.value
 
-        if (stre == ' ' && cons == ' ' && dex == ' ' && int == ' ' && wis == ' ' && char == ' ' && lp == ' ' && mp == ' ' && dp == ' ' && lvl == ' ') {
+        if (stre != ' ' && cons != ' ' && dex != ' ' && int != ' ' && wis != ' ' && char != ' ' && lp != ' ' && mp != ' ' && dp != ' ' && lvl != ' ') {
             atrib = true
         }
     } else if (chkop) {
@@ -143,22 +143,20 @@ function register() {
                 resposta.json().then(json => {
                     console.log(json);
                     console.log(JSON.stringify(json));
-                    sessionStorage.EMAIL_USUARIO = json.email;
-                    sessionStorage.ID_USUARIO = json.id;
-
-                    resposta.text().then(texto => {
-                        console.error(texto);
-                    });
 
                     setTimeout(() => {
                         window.location = "novoregistro.html"
                     }, "2000")
-
+                    
                 });
-
+                
             } else {
                 console.log("Houve um erro ao tentar realizar o login!");
-
+                
+                resposta.text().then(texto => {
+                    console.error(texto);
+                });
+                
                 document.getElementById("register").classList = "signupstatus reject"
                 div_errorstatus.innerHTML = `Preencha todos os campos obrigatórios.`
             }

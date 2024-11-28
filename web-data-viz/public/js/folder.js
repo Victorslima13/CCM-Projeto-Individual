@@ -93,9 +93,9 @@ function cadastrar() {
                         }, "2000")
                     } else {
                         if (resposta == '') { }
-                        console.log("Houve um erro ao tentar realizar o cadastro!");
-
                         document.getElementById("sigunp").classList = "signupstatus reject"
+                        
+                        console.log("Houve um erro ao tentar realizar o cadastro!");
                     }
                 })
                 .catch(function (resposta) {
@@ -127,10 +127,6 @@ function entrar() {
                 document.getElementById("login").classList = "signupstatus accept"
                 div_errorstatus.innerHTML = ``
 
-                setTimeout(() => {
-                    window.location = "novoregistro.html"
-                }, "2000")
-
                 resposta.json().then(json => {
                     console.log(json);
                     console.log(JSON.stringify(json));
@@ -138,6 +134,10 @@ function entrar() {
                     sessionStorage.ID_USUARIO = json.id;
                 });
 
+                setTimeout(() => {
+                    window.location = "novoregistro.html"
+                }, "2000")
+                
             } else {
                 console.log("Houve um erro ao tentar realizar o login!");
 
