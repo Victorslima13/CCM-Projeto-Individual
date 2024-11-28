@@ -7,7 +7,8 @@
     <title>CCM Estatisticas</title>
     <link rel="stylesheet" href="./css/general.css">
     <link rel="stylesheet" href="./css/book.css">
-    <link rel="stylesheet" href="../css/profilemenu.css">
+    <link rel="stylesheet" href="./css/profilemenu.css">
+    <link rel="stylesheet" href="./css/graphs.css">
 </head>
 
 <body onload="pulldata()">
@@ -129,19 +130,17 @@
                 <div class="read">
                     <div class="pageleft">
                         <h1>Informações Gerais</h1>
-                        <div class="pagetext">
-                            Nesta pagina voce encontrara algumas informações a respeito dos registros em geral.
-                        </div>
+                            Nesta pagina você encontrará algumas informações a respeito dos registros em geral.
                         <div class="kpis">
                             <div class="kipbox">
-                                <h2 id="higheruni"></h2>
+                                <div class="kiptitle" id="higheruni"></div>
                             </div>
                             <div class="kipbox">
-                                <h2 id="loweruni"></h2>
+                                <div class="kiptitle" id="loweruni"></div>
                             </div>
                         </div>
                         <div class="grafico">
-                            <canvas id="graphchart"></canvas>
+                            <canvas id="graphqtychart"></canvas>
                         </div>
                     </div>
                     <div class="pageright">
@@ -149,18 +148,43 @@
                             <h1>Informações por universo</h1>
                             Aqui temos informações filtradas por universo explorado.
                             <div class="kpis">
-                                <h2>Seres de D&D</h2>
-                                <h2>Seres de T20</h2>
-                                <h2>Seres de Ordem P.</h2>
+                                <div class="kpibox">
+                                    <div class="kiptitle" id="dndbeingcreat"></div>
+                                </div>
+                                <div class="kpibox">
+                                    <div class="kiptitle" id="dndbeingmonst"></div>
+                                </div>
+                                <div class="kpibox">
+                                    <div class="kiptitle" id="dndbeingboth"></div>
+                                </div>
+                                <div class="kpibox">
+                                    <div class="kiptitle" id="t20beingcreat"></div>
+                                </div>
+                                <div class="kpibox">
+                                    <div class="kiptitle" id="t20beingmonst"></div>
+                                </div>
+                                <div class="kpibox">
+                                    <div class="kiptitle" id="t20beingboth"></div>
+                                </div>
+                                <div class="kpibox">
+                                    <div class="kiptitle" id="opbeingcreat"></div>
+                                </div>
+                                <div class="kpibox">
+                                    <div class="kiptitle" id="opbeingmonst"></div>
+                                </div>
+                                <div class="kpibox">
+                                    <div class="kiptitle" id="opbeingboth"></div>
+                                </div>
                             </div>
                             <div class="grafico">
+                                <canvas id="graphunichart"></canvas>
                             </div>
                         </div>
                     </div>
                 </div>
             </li>
 
-            <li id="personal">
+            <!-- <li id="personal">
                 <div class="read">
                     <div class="pageleft">
                         <div class="pagetext">
@@ -171,7 +195,7 @@
                         </div>
                     </div>
                 </div>
-            </li>
+            </li> -->
         </ul>
         <div class="buttonspage">
             <button class="buttonpageleft" onclick="flippageback()"><img src="./images/Arrow left.png"

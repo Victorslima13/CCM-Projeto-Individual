@@ -1,0 +1,26 @@
+.kips {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 1%;
+    margin: 5%;
+}
+
+.kpibox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    border: black;
+    border-radius: 3px;
+    width: 20%;
+    height: 100%;
+}
+
+.kpititle {
+    font-size: 24px;
+    height: 100%;
+    width: 100%;
+    margin: 5%;
+    text-align: justify;
+}

@@ -9,17 +9,11 @@ var beingqtyt20 = 0
 var beingqtyop = 0
 
 function pulldata() {
-    dashbargraph('D&D', 'criatura')
-    dashbargraph('D&D', 'monstro')
-    dashbargraph('D&D', '2')
+    dashbargraph('D&D');    
 
-    dashbargraph('T20', 'criatura')
-    dashbargraph('T20', 'monstro')
-    dashbargraph('T20', '2')
+    dashbargraph('T20');
 
-    dashbargraph('OP', 'criatura')
-    dashbargraph('OP', 'monstro')
-    dashbargraph('OP', '2')
+    dashbargraph('OP');
 }
 
 function dashbargraph(universo) {
@@ -68,7 +62,8 @@ function dashbargraph(universo) {
 
             higheruni.innerHTML = `Universo mais explorado: ${biggestuni}`
             loweruni.innerHTML = `Universo menos explorado: ${lowestuni}`
-
+            
+            console.warn(vetorqtycreature, vetorqtymonster, vetorqtycretmonst)
             showgraph(vetorqtycreature, vetorqtymonster, vetorqtycretmonst)
         })
         .catch((error) => {
@@ -77,9 +72,39 @@ function dashbargraph(universo) {
 }
 
 function showgraph(vetorqtycreature, vetorqtymonster, vetorqtycretmonst) {
-    const graficoCriaturas = document.getElementById('graphchart')
+    const graficoCriaturas = document.getElementById('graphqtychart');
+    const graficoCreatUni = document.getElementById('graphunichart');
 
     new Chart(graficoCriaturas, {
+        type: 'bar',
+        data: {
+            labels: ['D&D', 'T20', 'OP'],
+            datasets: [{
+                label: 'Quantidade',
+                backgroundColor: ['#AFFB3C'],
+                borderColor: ['#AFFB3C'],
+                data: [beingqtydnd, beingqtyt20, beingqtyop],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            plugins: {
+                title: {
+                    text: 'Quantidade de Criaturas e Monstros existentes:',
+                    color: '#000000',
+                    display: true
+                },
+                legend: {
+                    position: 'top',
+                    labels: {
+                        boxHeight: 3
+                    }
+                }
+            }
+        }
+    })
+    
+    new Chart(graficoCreatUni, {
         type: 'bar',
         data: {
             labels: ['D&D', 'T20', 'OP'],
@@ -105,7 +130,7 @@ function showgraph(vetorqtycreature, vetorqtymonster, vetorqtycretmonst) {
                 borderWidth: 1
             }]
         },
-        options: { // opções do formato do gráfico
+        options: {
             plugins: {
                 title: {
                     text: 'Quantidade de Criaturas e Monstros existentes:',

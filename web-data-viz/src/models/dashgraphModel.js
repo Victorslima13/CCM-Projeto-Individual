@@ -12,7 +12,7 @@ function dashtake() {
 
 function dashbargraph(universo) {
     var instrucaoSql = `
-        select count(idser) as Quantidade, universo as Universo
+        select tipo, count(idser) as Quantidade, universo as Universo
         from ser where universo = '${universo}'
         group by tipo;
     `;

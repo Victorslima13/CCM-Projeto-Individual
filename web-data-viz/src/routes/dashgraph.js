@@ -7,7 +7,7 @@ router.get("/dashtake", function (req, res) {
     dashgraphController.dashtake(req, res);
 })
 
-router.get("/dashbargraph/:universo/:tipo", function (req, res) {
+router.get("/dashbargraph/:universo", function (req, res) {
     dashgraphController.dashbargraph(req, res);
 })
 

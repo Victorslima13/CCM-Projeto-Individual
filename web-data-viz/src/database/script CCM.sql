@@ -84,5 +84,3 @@ desc usuario;
 
 select * from usuario;
 select * from ser;
-
-UPDATE usuario SET nomeusuario = 'cle', email = 'email@email.com', senha = 'Mano13@' where senha = 'Senha13@' and idusuario = 1;
