@@ -9,7 +9,7 @@ var beingqtyt20 = 0
 var beingqtyop = 0
 
 function pulldata() {
-    dashbargraph('D&D');    
+    dashbargraph('D&D');
 
     dashbargraph('T20');
 
@@ -42,7 +42,7 @@ function dashbargraph(universo) {
                 if (json[i].Universo == 'OP') {
                     beingqtyop += json[i].Quantidade
                 }
-                
+
                 if (beingqtydnd > beingqtyt20 && beingqtydnd > beingqtyop) {
                     biggestuni = 'D&D'
                 } else if (beingqtydnd < beingqtyt20 && beingqtydnd < beingqtyop) {
@@ -60,9 +60,9 @@ function dashbargraph(universo) {
                 }
             }
 
-            higheruni.innerHTML = `Universo mais explorado: ${biggestuni}`
-            loweruni.innerHTML = `Universo menos explorado: ${lowestuni}`
-            
+            higheruni.innerHTML = `<br>${biggestuni}`
+            loweruni.innerHTML = `<br>${lowestuni}`
+
             console.warn(vetorqtycreature, vetorqtymonster, vetorqtycretmonst)
             showgraph(vetorqtycreature, vetorqtymonster, vetorqtycretmonst)
         })
@@ -90,7 +90,7 @@ function showgraph(vetorqtycreature, vetorqtymonster, vetorqtycretmonst) {
         options: {
             plugins: {
                 title: {
-                    text: 'Quantidade de Criaturas e Monstros existentes:',
+                    text: 'Quantidade de Seres Registrados:',
                     color: '#000000',
                     display: true
                 },
@@ -103,7 +103,7 @@ function showgraph(vetorqtycreature, vetorqtymonster, vetorqtycretmonst) {
             }
         }
     })
-    
+
     new Chart(graficoCreatUni, {
         type: 'bar',
         data: {
@@ -133,7 +133,7 @@ function showgraph(vetorqtycreature, vetorqtymonster, vetorqtycretmonst) {
         options: {
             plugins: {
                 title: {
-                    text: 'Quantidade de Criaturas e Monstros existentes:',
+                    text: 'Tipos de seres por Universo:',
                     color: '#000000',
                     display: true
                 },
@@ -147,3 +147,45 @@ function showgraph(vetorqtycreature, vetorqtymonster, vetorqtycretmonst) {
         }
     })
 }
+
+function takecatalog() {
+    fetch(`/dashgraph/takecatalog`, {
+        method: 'GET'
+    }).then((res) => res.json())
+        .then((json) => {
+            console.log(json)
+            var msg = `
+            <ul class="bookcontent">
+                <li>
+                    <div class="read on">
+                        <div class="bookcover"></div>
+                    </div>
+                </li>
+            `
+            for (var i = 0; i < json.length; i++) {
+                msg += `
+                <li>
+                <div class="read">
+                    <div class="pageleft">
+                        <div class="pagetext">
+                        </div>
+                    </div>
+                    <div class="pageright">
+                        <div class="pagetext">
+                        </div>
+                    </div>
+                </div>
+            </li>
+                `
+            }
+
+            msg += `</ul>`
+
+            div_bookcontent.innerHTML = msg
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+}
+
+takecatalog()

@@ -21,7 +21,36 @@ function dashbargraph(universo) {
     return database.executar(instrucaoSql);
 }
 
+function takecatalog() {
+    var instrucaoSql = `
+select nomeser as nome,
+raca,
+tipo,
+nomeusuario as Criador,
+universo,
+forca,
+constituicao,
+destresa,
+inteligencia,
+sabedoria,
+carisma,
+pontosvida,
+pontosmana,
+pontosdef,
+nivel,
+descfisica,
+desccomp,
+descmecanica from ser
+join usuario on idusuario = fkcriador
+join caracteristica on idser = fkser;
+    `;
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
 module.exports = {
     dashtake,
-    dashbargraph
+    dashbargraph,
+    takecatalog
 };

@@ -11,4 +11,8 @@ router.get("/dashbargraph/:universo", function (req, res) {
     dashgraphController.dashbargraph(req, res);
 })
 
+router.get("/takecatalog", function (req, res) {
+    dashgraphController.takecatalog(req, res);
+})
+
 module.exports = router;

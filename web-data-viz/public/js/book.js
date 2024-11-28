@@ -36,6 +36,6 @@ function flippagenext() {
         document.getElementById("booktitle").style.display = 'none'
         pageposition++
     }
-
-    showpage()
+    
+    showpage();
 }

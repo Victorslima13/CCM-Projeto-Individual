@@ -35,7 +35,25 @@ function dashbargraph(req, res) {
         );
 }
 
+function takecatalog(req, res) {
+
+    dashgraphModel.takecatalog()
+        .then(
+            (resultado) => { res.status(200).json(resultado) }
+        ).catch(
+            function (erro) {
+                console.log(erro);
+                console.log(
+                    "\nHouve um erro ao pegar os dados! Erro: ",
+                    erro.sqlMessage
+                );
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
+
 module.exports = {
     dashtake,
-    dashbargraph
+    dashbargraph,
+    takecatalog
 }
