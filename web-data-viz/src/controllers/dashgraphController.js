@@ -20,7 +20,7 @@ function dashbargraph(req, res) {
     var universo = req.params.universo
     var tipo = req.params.tipo
 
-    dashgraphModel.dashbargraph(universo, tipo)
+    dashgraphModel.dashbargraph(universo)
         .then(
             (resultado) => { res.status(200).json(resultado) }
         ).catch(

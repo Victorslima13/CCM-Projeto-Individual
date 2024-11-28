@@ -10,11 +10,12 @@ function dashtake() {
     return database.executar(instrucaoSql);
 }
 
-function dashbargraph(universo, tipo) {
+function dashbargraph(universo) {
     var instrucaoSql = `
-    select count(idser) as Quantidade, universo as Universo
-    from ser where universo = '${universo}' and tipo = '${tipo}';
-    `
+        select count(idser) as Quantidade, universo as Universo
+        from ser where universo = '${universo}'
+        group by tipo;
+    `;
 
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);

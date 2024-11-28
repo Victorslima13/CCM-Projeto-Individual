@@ -22,8 +22,8 @@ function pulldata() {
     dashbargraph('OP', '2')
 }
 
-function dashbargraph(universo, tipo) {
-    fetch(`/dashgraph/dashbargraph/${universo}/${tipo}`, {
+function dashbargraph(universo) {
+    fetch(`/dashgraph/dashbargraph/${universo}`, {
         method: 'GET'
     }).then((res) => res.json())
         .then((json) => {
@@ -40,30 +40,30 @@ function dashbargraph(universo, tipo) {
                     vetorqtycretmonst.push(json[i].Quantidade)
                 }
                 if (json[i].Universo == 'D&D') {
-                    beingqtydnd++
+                    beingqtydnd += json[i].Quantidade
                 }
                 if (json[i].Universo == 'T20') {
-                    beingqtyt20++
+                    beingqtyt20 += json[i].Quantidade
                 }
                 if (json[i].Universo == 'OP') {
-                    beingqtyop++
+                    beingqtyop += json[i].Quantidade
                 }
-            }
-
-            if (beingqtydnd > beingqtyt20 && beingqtydnd > beingqtyop) {
-                biggestuni = 'D&D'
-            } else if (beingqtydnd < beingqtyt20 && beingqtydnd < beingqtyop) {
-                lowestuni = 'D&D'
-            }
-            if (beingqtyt20 > beingqtydnd && beingqtyt20 > beingqtyop) {
-                biggestuni = 'T20'
-            } else if (beingqtyt20 < beingqtydnd && beingqtyt20 < beingqtyop) {
-                lowestuni = 'T20'
-            }
-            if (beingqtyop > beingqtydnd && beingqtyop > beingqtyt20) {
-                biggestuni = 'OP'
-            } else if (beingqtyop < beingqtydnd && beingqtyop < beingqtyt20) {
-                lowestuni = 'OP'
+                
+                if (beingqtydnd > beingqtyt20 && beingqtydnd > beingqtyop) {
+                    biggestuni = 'D&D'
+                } else if (beingqtydnd < beingqtyt20 && beingqtydnd < beingqtyop) {
+                    lowestuni = 'D&D'
+                }
+                if (beingqtyt20 > beingqtydnd && beingqtyt20 > beingqtyop) {
+                    biggestuni = 'T20'
+                } else if (beingqtyt20 < beingqtydnd && beingqtyt20 < beingqtyop) {
+                    lowestuni = 'T20'
+                }
+                if (beingqtyop > beingqtydnd && beingqtyop > beingqtyt20) {
+                    biggestuni = 'OP'
+                } else if (beingqtyop < beingqtydnd && beingqtyop < beingqtyt20) {
+                    lowestuni = 'OP'
+                }
             }
 
             higheruni.innerHTML = `Universo mais explorado: ${biggestuni}`
