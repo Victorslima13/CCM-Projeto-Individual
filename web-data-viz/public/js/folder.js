@@ -92,7 +92,6 @@ function cadastrar() {
                             window.location = "login.html"
                         }, "2000")
                     } else {
-                        if (resposta == '') { }
                         document.getElementById("sigunp").classList = "signupstatus reject"
                         
                         console.log("Houve um erro ao tentar realizar o cadastro!");
